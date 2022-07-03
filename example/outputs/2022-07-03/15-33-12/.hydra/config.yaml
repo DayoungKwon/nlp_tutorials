@@ -1,0 +1,11 @@
+data:
+  train: nsmc/ratings_train.txt
+  test: nsmc/ratings_test.txt
+tokenizer:
+  type: huggingface/bert-base-nocased
+task:
+  type: classification
+train:
+  criterion: cross_entropy
+  optimizer: null
+  lr_scheduler: null

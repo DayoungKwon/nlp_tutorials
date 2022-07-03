@@ -1,0 +1,7 @@
+data:
+  train: ../example/nsmc/ratings_train.txt
+  test: ../example/nsmc/ratings_test.txt
+tokenizer:
+  type: huggingface/bert-base-nocased
+task:
+  type: classification

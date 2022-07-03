@@ -1,0 +1,25 @@
+# _self_ = this yaml file configs 
+# priority of _self_ is lower than followed configs 
+# ex. if data config value is null, use config.yaml's data config
+defaults:
+  - _self_
+  - data : null
+  - task: null
+  - model: null
+  - tokenizer : null 
+  - train : null 
+
+data : 
+  - train : 'example/nsmc/ratings_train.txt'
+  - test : 'example/nsmc/ratings_test.txt'
+
+tokenizer :
+  - type : huggingface/bert-base-nocased
+
+task : 
+  - type : classification
+
+train :
+  - criterion : cross_entropy 
+  - optimizer : null 
+  - lr_scheduler : null 
